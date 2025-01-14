@@ -1,6 +1,5 @@
 import { Smartphone, Search, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
 
 const features = [
   {
@@ -52,7 +51,7 @@ const FeaturesHighlight = () => {
         </motion.h2>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -78,23 +77,6 @@ const FeaturesHighlight = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex justify-center"
-        >
-          <Button
-            variant="default"
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-foreground"
-          >
-            See All Features
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
